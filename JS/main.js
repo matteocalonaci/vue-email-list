@@ -4,6 +4,7 @@ createApp({
         return {
             titolo: "VUE GENERATE 10 EMAIL",
             ul: "Le mail generate sono:",
+            text: "",
             element: "",
             email: [],
         }
@@ -23,7 +24,15 @@ createApp({
             }
         },
 
-
+        addButton() {
+            console.log(this.text)
+            this.email.push(this.text)
+            this.text = ""
+        },
+        remuveButton(index) {
+            this.email.splice(index, 1);
+            console.log(index, this.email);
+        },
     },
 
 
